@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     exit();
 }
 
+
 if ($_POST['METHOD'] == 'POST') {
     unset($_POST['METHOD']);
     $nombreProducto = $_POST['nombre_producto'];

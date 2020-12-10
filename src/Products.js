@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Products(props) {
   const classes = useStyles();
-  const url = "http://localhost:80/apiRetonoweb/";
+  const url = "us-cdbr-east-02.cleardb.com";
   const [product, setProduct] = useState([]);
   const [productBackup, setProductBackup] = useState([]);
   const [filteredProduct, setFilteredProduct] = useState([]);
