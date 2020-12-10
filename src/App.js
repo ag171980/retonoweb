@@ -22,7 +22,7 @@ function App() {
         <BrowserRouter>
           <Header />
           <Switch>
-            <Route exact from="/home" render={(props) => <Home {...props} />} />
+            <Route exact from="/" render={(props) => <Home {...props} />} />
             <Route
               exact
               from="/products"
