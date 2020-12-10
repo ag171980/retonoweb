@@ -1,0 +1,37 @@
+@import 'fonts.css';
+@import 'Slider.css';
+@import 'Abouts.css';
+@import "Footer.css";
+@import 'Faq.css';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 50px;
+    color: #769B27;
+    text-shadow: 1.5px 1.5px 1.5px
+}
+
+/*----------Start Keyframes----------*/
+
+
+/*----------Start Media Queries----------*/
+
+/*@media (max-width:){
+
+}*/
+
+
+
+@media (max-width:425px) {
+    h2 {
+        font-size: 38px;
+        margin: 30px 0px;
+    }
+}
