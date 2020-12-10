@@ -83,7 +83,7 @@ function Header(props) {
   const menuItems = [
     {
       menuTitle: "Home",
-      pageURL: "/home",
+      pageURL: "/",
       component: Home,
     },
     {
