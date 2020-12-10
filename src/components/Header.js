@@ -144,7 +144,7 @@ function Header(props) {
                 <a
                   variant="contained"
                   className={classes.button}
-                  onClick={() => handleButtonClick("/home")}
+                  onClick={() => handleButtonClick("/")}
                 >
                   Inicio
               </a>
