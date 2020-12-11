@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Products(props) {
   const classes = useStyles();
-  const url = "https://ecoretono.herokuapp.com/src/php/index.php";
+  const url = "https://github.com/ag171980/retonoweb/blob/master/src/php/index.php";
   const [product, setProduct] = useState([]);
   const [productBackup, setProductBackup] = useState([]);
   const [filteredProduct, setFilteredProduct] = useState([]);
