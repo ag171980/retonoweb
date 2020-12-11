@@ -1,7 +1,9 @@
 <?php
 include 'bd/conexion.php';
 
+
 header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Credentials: *');
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (isset($_GET['id_producto'])) {

@@ -23,7 +23,7 @@ function conectarBD()
 $user="b13485117d853f";
 $port=3306;
 $socket="";
-$password="";
+$password="c651365d";
 $host="us-cdbr-east-02.cleardb.com";
 $dbname="heroku_643e41ebdbc1038";
 $servidor = 'mysql:dbname='.$dbname.';host='.$host.'.';
