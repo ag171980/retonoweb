@@ -1,4 +1,5 @@
 @import "Footer.css";
+@import "fonts.css";
 
 * {
     margin: 0;
@@ -6,6 +7,33 @@
     box-sizing: border-box;
 }
 
+/*
+.info {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #848484;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: rgba(157, 189, 99, 1);
+    transition: .2s all;
+}
+.info>p{
+    font-size: 23px;
+    color: white;
+}
+
+.info:hover{
+    cursor: pointer;
+    background-color: #B5E164;
+    transform: scale(1.5);
+}*/
 .Products {
     margin-top: 15vh;
 }
@@ -59,6 +87,7 @@
     display: grid;
     height: 52.5em;
     width: 15%;
+    margin: 40px 0px;
 }
 
 .filtros h4 {
@@ -69,6 +98,10 @@
 
 .productos {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .label {
@@ -88,11 +121,13 @@
 #noProducts {
     opacity: 0;
     position: relative;
-    top: 150px;
+    
     left: 50%;
     transform: translate(-50%);
     font-size: 30px;
     color: rgba(157, 189, 99, 1);
+    
+
 }
 
 .card {
@@ -124,7 +159,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
 }
-/*
+
 .absorcion {
     position: absolute;
     top: 110px;
@@ -133,7 +168,7 @@
 
 .text {
     color: white;
-    font-size: 19px;
+    font-size: 16px;
     font-family: 'Raleway', sans-serif;
     padding: 5px 0px;
 }
@@ -145,7 +180,11 @@
     top: 112px;
     font-size: 30px;
 }
-*/
+
+.controlLabel {}
+
+
+
 @media (max-width:1454px) {
     .cards {
 
@@ -170,6 +209,15 @@
         grid-column-gap: 35px;
 
     }
+
+    .label {
+        font-size: 18px;
+    }
+
+    .filtros {
+
+        width: 25%;
+    }
 }
 
 @media (max-width:958px) {
@@ -177,8 +225,13 @@
         grid-template-columns: auto;
     }
 
+    .label {
+        font-size: 15px;
+    }
+
     .filtros {
         height: 162.5em;
+        width: 25%;
     }
 }
 
@@ -191,7 +244,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px auto;
+        margin: 5px auto;
     }
 
     .filtros {
@@ -199,12 +252,18 @@
         width: 90%;
         margin: 50px;
     }
-    .filtros h4{
+
+    .filtros h4 {
         padding: 5px;
     }
+
+    .label {
+        font-size: 16px;
+    }
+
     .formGroup {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     #noProducts {
@@ -219,5 +278,17 @@
 @media (max-width:425px) {
     .root {
         max-width: 260px;
+    }
+
+    .titulo {
+        font-size: 25px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .precio {
+        font-size: 25px;
     }
 }

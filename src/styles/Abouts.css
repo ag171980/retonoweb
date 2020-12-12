@@ -60,10 +60,12 @@
     .item-text h3 {
         text-align: center;
         padding: 5px;
+        font-size: 30px;
     }
 
     .item-text p {
         padding: 25px;
+        font-size: 19px;
     }
 
     .abouts .item-about {
@@ -76,9 +78,22 @@
     .abouts .item-about {
         margin: 15px;
     }
+    .item-text h3{
+        font-size: 25px;
+    }
+    .item-text p {
+        font-size: 16px;
+    }
 }
 
 @media (max-width:320px) {
+    
+    .item-text h3{
+        font-size: 23px;
+    }
+    .item-text p {
+        font-size: 14px;
+    }
 
     .item-images img {
         height: 250px;

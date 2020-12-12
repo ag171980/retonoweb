@@ -18,7 +18,7 @@ import Home from "../Home.js";
 import Productos from "../Products.js";
 import Contact from "../Contact.js";
 
-
+import '../styles/Header.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    margin:"0 auto",
   },
   title: {
     [theme.breakpoints.down("xs")]: {
@@ -104,7 +104,7 @@ function Header(props) {
         <Toolbar className={classes.Toolbar}>
           <img className={classes.logo} src={Logo} alt="Logo de la pagina " />
           {isMobile ? (
-            <div>
+            <div className="menuBtn">
               <IconButton
                 edge="start"
                 className={classes.menuButton}
@@ -129,10 +129,10 @@ function Header(props) {
                 open={open}
                 onClose={() => setAnchorEl(null)}
               >
-                {menuItems.map((menuItem) => {
+                {menuItems.map((menuItem,index) => {
                   const { menuTitle, pageURL } = menuItem;
                   return (
-                    <MenuItem onClick={() => handleMenuClick(pageURL)}>
+                    <MenuItem key={index} onClick={() => handleMenuClick(pageURL)}>
                       {menuTitle}
                     </MenuItem>
                   );

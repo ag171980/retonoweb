@@ -1,40 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
-
-
-
+//Imports Images 
 import Toallita from "../src/fotos/toallita1.jpg";
 import Gota1 from "../src/fotos/gota1.png";
 import Gota2 from "../src/fotos/gota2.png";
 import Gota3 from "../src/fotos/gota3.png";
 /*-----*/
-
+//Imports Material UI Design
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-
 import Typography from "@material-ui/core/Typography";
-import Axios from "axios";
-
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
-
 import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
+//Imports Axios
+import Axios from "axios";
+//Imports Stylsheets
 import "../src/styles/Product.css";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#388e3c",
+      main: '#f44336',
     },
     secondary: {
-      main: "#f44336",
+      main: '#f44336',
     },
   },
 });
@@ -68,9 +64,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "4px",
   },
   inputInput: {
+
     transition: theme.transitions.create("width"),
     [theme.breakpoints.up("md")]: {
-      width: "60ch",
+      width: "30em",
     },
   },
   controlLabel: {
@@ -111,7 +108,7 @@ function Products(props) {
   const [productBackup, setProductBackup] = useState([]);
   const [filteredProduct, setFilteredProduct] = useState([]);
   const noEjecutes = true;
-  
+
   const requestGet = async () => {
     await Axios.get(url).then((response) => {
       console.log(response.data);
@@ -119,14 +116,29 @@ function Products(props) {
       setProductBackup(response.data);
     });
   };
-
+  /*
+  function info() {
+    let inf = document.getElementById('info');
+    const subinf = document.querySelector('.subinfo')
+    let stateInfo = false;
+    inf.addEventListener('click', function () {
+      if (!stateInfo) {
+        subinf.classList.add("open")
+        stateInfo = true;
+      } else {
+        subinf.classList.remove("open")
+        stateInfo = false;
+      }
+    });
+  }*/
   useEffect(() => {
     requestGet();
-
+    // info();
   }, [noEjecutes]);
 
   useEffect(() => {
     //console.log("filteredProduct", filteredProduct);
+
     if (filteredProduct.length === 0) {
       setProduct(productBackup);
       //console.log("initial product:", product);
@@ -188,8 +200,16 @@ function Products(props) {
 
   return (
     <div>
+
       <div className="Products">
         <h2 className="subtitulo">Nuestros Productos</h2>
+        {/*
+        aca va un boton que explica que son las gotas de sangre en la pagina
+<div id="info" className="info">
+          <p>?</p>
+        </div>
+        <div id="subinfo" className="subinfo"></div>
+        */}
         <div className="buscador">
           <InputBase
             placeholder="Buscar..."
@@ -218,69 +238,74 @@ function Products(props) {
                   <Checkbox
                     value="higiene intima"
                     onChange={(e) => handleCheckBoxChange(e)}
-
+                    color="default"
                   />
                 }
                 value="Higiene intima"
-                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Higiene íntima</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className="label">Higiene íntima</Typography>}
                 className={classes.controlLabel}
               />
+
               <FormControlLabel
                 control={
                   <Checkbox
                     value="cuidado corporal"
                     onChange={(e) => handleCheckBoxChange(e)}
-                    color={theme.palette.secondary.main}
+                    color="default"
                   />
                 }
                 value="Cuidado corporal"
-                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Cuidado corporal</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className="label">Cuidado corporal</Typography>}
                 className={classes.controlLabel}
               />
+
               <FormControlLabel
                 control={
                   <Checkbox
                     value="accesorios"
                     onChange={(e) => handleCheckBoxChange(e)}
-                    color={theme.palette.secondary.main}
+                    color="default"
                   />
                 }
                 value="Accesorios"
-                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Accesorios</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className="label">Accesorios</Typography>}
                 className={classes.controlLabel}
               />
+
               <FormControlLabel
                 control={
                   <Checkbox
                     value="combos"
                     onChange={(e) => handleCheckBoxChange(e)}
-                    color={theme.palette.secondary.main}
+                    color="default"
                   />
                 }
                 value="Combos"
-                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Combos</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className="label">Combos</Typography>}
                 className={classes.controlLabel}
               />
+
               <FormControlLabel
                 control={
                   <Checkbox
                     value="regala"
                     onChange={(e) => handleCheckBoxChange(e)}
-                    color={theme.palette.secondary.main}
+                    color="default"
                   />
                 }
                 value="Regala"
-                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Regala</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className="label">Regala</Typography>}
                 className={classes.controlLabel}
               />
+
             </FormGroup>
           </FormControl>
 
           <div className="productos">
             <p id="noProducts"></p>
             <div className="cards">
-              {product.map((producto) => (
-                <Card className="root">
+              {product.map((producto, index) => (
+                <Card key={index} className="root">
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -295,7 +320,7 @@ function Products(props) {
                         {producto.nombre_producto}
                       </Typography>
                       <Typography
-                        className={classes.text}
+                        className="text"
                         variant="body2"
                         color="textSecondary"
                         component="p"
@@ -303,7 +328,7 @@ function Products(props) {
                         {producto.descripcion_producto}
                       </Typography>
                       <Typography
-                        className={classes.precio}
+                        className="precio"
                         variant="h4"
                         color="textSecondary"
                         component="h2"
@@ -311,7 +336,7 @@ function Products(props) {
                         ${producto.precio_producto}
                       </Typography>
                       <Typography
-                        className={classes.absorcion}
+                        className="absorcion"
                         variant="h4"
                         color="textSecondary"
                         component="p"
