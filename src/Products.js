@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Products(props) {
   const classes = useStyles();
-  const url = "http://localhost:80/apiRetonoweb/";
+  const url = "https://ecoretono.000webhostapp.com/index.php";
   const [product, setProduct] = useState([]);
   const [productBackup, setProductBackup] = useState([]);
   const [filteredProduct, setFilteredProduct] = useState([]);
@@ -114,7 +114,7 @@ function Products(props) {
   
   const requestGet = async () => {
     await Axios.get(url).then((response) => {
-      //console.log(response.data);
+      console.log(response.data);
       setProduct(response.data);
       setProductBackup(response.data);
     });
