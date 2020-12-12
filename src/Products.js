@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
+//Imports Stylsheets
+import "./styles/Product.css";
 //Imports Images 
 import Toallita from "../src/fotos/toallita1.jpg";
 import Gota1 from "../src/fotos/gota1.png";
@@ -22,8 +24,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 //Imports Axios
 import Axios from "axios";
-//Imports Stylsheets
-import "../src/styles/Product.css";
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -74,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px",
   },
   label: {
-    fontSize: "20px",
+    fontSize: "19px",
     color: "white",
     padding: "8px 0px",
 
@@ -242,7 +243,7 @@ function Products(props) {
                   />
                 }
                 value="Higiene intima"
-                label={<Typography variant="body2" color="textPrimary" className="label">Higiene íntima</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Higiene íntima</Typography>}
                 className={classes.controlLabel}
               />
 
@@ -255,7 +256,7 @@ function Products(props) {
                   />
                 }
                 value="Cuidado corporal"
-                label={<Typography variant="body2" color="textPrimary" className="label">Cuidado corporal</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Cuidado corporal</Typography>}
                 className={classes.controlLabel}
               />
 
@@ -268,7 +269,7 @@ function Products(props) {
                   />
                 }
                 value="Accesorios"
-                label={<Typography variant="body2" color="textPrimary" className="label">Accesorios</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Accesorios</Typography>}
                 className={classes.controlLabel}
               />
 
@@ -281,7 +282,7 @@ function Products(props) {
                   />
                 }
                 value="Combos"
-                label={<Typography variant="body2" color="textPrimary" className="label">Combos</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Combos</Typography>}
                 className={classes.controlLabel}
               />
 
@@ -294,7 +295,7 @@ function Products(props) {
                   />
                 }
                 value="Regala"
-                label={<Typography variant="body2" color="textPrimary" className="label">Regala</Typography>}
+                label={<Typography variant="body2" color="textPrimary" className={classes.label}>Regala</Typography>}
                 className={classes.controlLabel}
               />
 
@@ -320,7 +321,7 @@ function Products(props) {
                         {producto.nombre_producto}
                       </Typography>
                       <Typography
-                        className="text"
+                        className={classes.text}
                         variant="body2"
                         color="textSecondary"
                         component="p"
@@ -328,7 +329,7 @@ function Products(props) {
                         {producto.descripcion_producto}
                       </Typography>
                       <Typography
-                        className="precio"
+                        className={classes.precio}
                         variant="h4"
                         color="textSecondary"
                         component="h2"
@@ -336,7 +337,7 @@ function Products(props) {
                         ${producto.precio_producto}
                       </Typography>
                       <Typography
-                        className="absorcion"
+                        className={classes.absorcion}
                         variant="h4"
                         color="textSecondary"
                         component="p"
