@@ -106,11 +106,12 @@ const useStyles = makeStyles((theme) => ({
 
 function Products(props) {
   const classes = useStyles();
-  const url = "http://ecoretono.herokuapp.com/php/index.php";
+  const url = "http://localhost:80/apiRetonoweb/";
   const [product, setProduct] = useState([]);
   const [productBackup, setProductBackup] = useState([]);
   const [filteredProduct, setFilteredProduct] = useState([]);
   const noEjecutes = true;
+  
   const requestGet = async () => {
     await Axios.get(url).then((response) => {
       //console.log(response.data);
