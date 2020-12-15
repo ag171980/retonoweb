@@ -18,7 +18,7 @@ import Home from "../Home.js";
 import Productos from "../Products.js";
 import Contact from "../Contact.js";
 
-import '../styles/Header.css';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,12 +49,35 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   menuButton: {
-    margin:"0 auto",
+    margin: "0 auto",
   },
   title: {
     [theme.breakpoints.down("xs")]: {
       flexGrow: 1,
     },
+  },
+  menu: {
+    backgroundColor: "rgba(0,0,0,0.8)",
+    position: "relative",
+    top: "400px",
+
+  },
+  menuBtn: {
+    position: "absolute",
+    right: "2em",
+  },
+  menuDesplegable: {
+    borderBottom: "0.5px solid #D3D3D3",
+    fontSize: "18px",
+    width: "100vw",
+
+    "&:hover": {
+      backgroundColor: "rgba(157, 189, 99, 0.9)",
+      color: "white",
+    },
+  },
+  contentMenu:{
+    margin:"30px 0px",
   },
 }));
 
@@ -82,17 +105,17 @@ function Header(props) {
 
   const menuItems = [
     {
-      menuTitle: "Home",
+      menuTitle: "Inicio",
       pageURL: "/",
       component: Home,
     },
     {
-      menuTitle: "Products",
+      menuTitle: "Productos",
       pageURL: "/products",
       component: Productos,
     },
     {
-      menuTitle: "Contact",
+      menuTitle: "Contacto",
       pageURL: "/contact",
       component: Contact,
     },
@@ -104,7 +127,7 @@ function Header(props) {
         <Toolbar className={classes.Toolbar}>
           <img className={classes.logo} src={Logo} alt="Logo de la pagina " />
           {isMobile ? (
-            <div className="menuBtn">
+            <div className={classes.menuBtn}>
               <IconButton
                 edge="start"
                 className={classes.menuButton}
@@ -116,6 +139,7 @@ function Header(props) {
               </IconButton>
               <Menu
                 id="menu-appbar"
+                className={classes.menu}
                 anchorEl={anchorEl}
                 anchorOrigin={{
                   vertical: "top",
@@ -129,14 +153,16 @@ function Header(props) {
                 open={open}
                 onClose={() => setAnchorEl(null)}
               >
-                {menuItems.map((menuItem,index) => {
-                  const { menuTitle, pageURL } = menuItem;
-                  return (
-                    <MenuItem key={index} onClick={() => handleMenuClick(pageURL)}>
-                      {menuTitle}
-                    </MenuItem>
-                  );
-                })}
+                <div className="contentMenu">
+                  {menuItems.map((menuItem, index) => {
+                    const { menuTitle, pageURL } = menuItem;
+                    return (
+                      <MenuItem className={classes.menuDesplegable} key={index} onClick={() => handleMenuClick(pageURL)}>
+                        {menuTitle}
+                      </MenuItem>
+                    );
+                  })}
+                </div>
               </Menu>
             </div>
           ) : (

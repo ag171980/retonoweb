@@ -11,28 +11,12 @@ function Abouts() {
                         <img src={slideOne} alt="" />
                     </div>
                     <div className="item-text">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>Nuestra Historia</h3>
+                        <p>Toallitas Ecológicas Retoño es un emprendimiento familiar que surgió  pensando en la necesidad de muchas mujeres que desean incorporar productos ecológicos  a su vida para colaborar con el cuidado del medioambiente y preservar su salud evitando el contacto con químicos nocivos.
+Desde nuestro lugar fomentamos, concientizamos y deseamos que muchas mujeres se sumen a este cambio necesario.</p>
                     </div>
                 </div>
-                <div className="item-about second">
-                    <div className="item-images">
-                        <img src={slideTwo} alt="" />
-                    </div>
-                    <div className="item-text">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-                <div className="item-about">
-                    <div className="item-images">
-                        <img src={slideThree} alt="" />
-                    </div>
-                    <div className="item-text">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     );

@@ -11,7 +11,6 @@
 .footer-item {
     display: flex;
     flex-direction: column;
-
 }
 
 .footer-item>img {
@@ -23,23 +22,6 @@
     width: 250px;
 }
 
-/*
-.footer-item:nth-child(1) {
-    background-color: green;
-}
-
-.footer-item:nth-child(2) {
-    background-color: blue;
-}
-
-.footer-item:nth-child(3) {
-    background-color: gray;
-}
-
-.footer-item:nth-child(4) {
-    background-color: pink;
-}
-*/
 .footer-item>h3 {
     font-size: 32px;
     text-align: start;
@@ -48,12 +30,12 @@
 
 
 .footer-item .item {
-    margin: 2px;
     text-align: start;
-    padding: 5px 30px;
+    padding: 0px 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 5px 0px;
 }
 
 .footer-item .item .icon {
@@ -69,13 +51,39 @@
     transition: 0.5s all;
 }
 
+.footer-item .item:hover,
 .footer-item .item a:hover {
     color: #A5FF5A;
+}
+
+.footer-item .pagos {
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15vw;
+    margin: 0 10px;
+}
+
+.footer-item .pago {
+    height: 30px;
+    width: 45px;
+    margin: 10px;
 }
 
 /*----------End Style Footer----------*/
 
 /*----------Start Media Queries----------*/
+@media (max-width:912px) {
+    .footer {
+        grid-template-columns: auto auto;
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+    }
+
+    .footer-item .pagos {
+        width: 30vw;
+    }
+}
 
 @media (max-width:768px) {
     .footer {
@@ -88,5 +96,13 @@
 @media (max-width:512px) {
     .footer {
         grid-template-columns: auto;
+    }
+    .footer-item .pagos {
+        width: 60vw;
+    }
+}
+@media (max-width:320px){
+    .footer-item .pagos{
+        width: 80vw;
     }
 }

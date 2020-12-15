@@ -71,9 +71,6 @@ const useStyles = makeStyles((theme) => ({
       width: "30em",
     },
   },
-  controlLabel: {
-    margin: "0px",
-  },
   label: {
     fontSize: "19px",
     color: "white",
