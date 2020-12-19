@@ -6,6 +6,7 @@ import Slider from '../src/components/Slider.js';
 import Abouts from '../src/components/Abouts.js';
 import Faq from '../src/components/Faq.js';
 import Footer from '../src/components/Footer.js';
+
 /*Import StyleSheet CSS*/
 import "../src/styles/Home.css";
 
@@ -21,7 +22,6 @@ function Home() {
       <Abouts />
       <h2>Preguntas Frecuentes</h2>
       <Faq />
-
     </div>
 
   );

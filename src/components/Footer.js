@@ -55,16 +55,16 @@ function Footer() {
             <div className="footer-item">
                 <h3>Formas de pago</h3>
                 <div className="pagos">
-                    <img src={American} className="pago" />
-                    <img src={BBVA} className="pago" />
-                    <img src={Dinners} className="pago" />
-                    <img src={MasterCard} className="pago" />
-                    <img src={MercadoPago} className="pago" />
-                    <img src={PagoFacil} className="pago" />
-                    <img src={PayPal} className="pago" />
-                    <img src={RapiPago} className="pago" />
-                    <img src={Visa} className="pago" />
-                    <img src={WesterUnion} className="pago" />
+                    <img src={American} className="pago" alt=""/>
+                    <img src={BBVA} className="pago" alt="" />
+                    <img src={Dinners} className="pago" alt="" />
+                    <img src={MasterCard} className="pago" alt="" />
+                    <img src={MercadoPago} className="pago" alt="" />
+                    <img src={PagoFacil} className="pago" alt="" />
+                    <img src={PayPal} className="pago" alt="" />
+                    <img src={RapiPago} className="pago" alt="" />
+                    <img src={Visa} className="pago" alt="" />
+                    <img src={WesterUnion} className="pago" alt="Imagen " />
                 </div>
             </div>
             <div className="footer-item">
