@@ -1,22 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { fade, makeStyles, useTheme } from "@material-ui/core/styles";
+import React from "react";
+import {makeStyles, useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { withRouter } from "react-router-dom";
-import SearchIcon from "@material-ui/icons/Search";
-import InputBase from "@material-ui/core/InputBase";
 import Logo from "../fotos/LogoRetonoo.png";
 
 /*routes*/
-import Home from "../Home.js";
-import Productos from "../Products.js";
-import Contact from "../Contact.js";
+import Home from "../Home";
+import Productos from "../Products";
+import Contact from "../Contact";
+import Tables from '../Tables';
 
 
 
@@ -76,8 +74,8 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
     },
   },
-  contentMenu:{
-    margin:"30px 0px",
+  contentMenu: {
+    margin: "30px 0px",
   },
 }));
 
@@ -119,6 +117,12 @@ function Header(props) {
       pageURL: "/contact",
       component: Contact,
     },
+    {
+      menuTitle: "Tables",
+      pageURL: "/tables",
+      component: Tables,
+    },
+
   ];
 
   return (
@@ -167,27 +171,34 @@ function Header(props) {
             </div>
           ) : (
               <div className={classes.headerOptions}>
-                <a
+                <div
                   variant="contained"
                   className={classes.button}
                   onClick={() => handleButtonClick("/")}
                 >
                   Inicio
-              </a>
-                <a
+                </div>
+                <div
                   variant="contained"
                   className={classes.button}
                   onClick={() => handleButtonClick("/products")}
                 >
                   Productos
-              </a>
-                <a
+                </div>
+                <div
                   variant="contained"
                   className={classes.button}
                   onClick={() => handleButtonClick("/contact")}
                 >
                   Contacto
-              </a>
+                </div>
+                <div
+                  variant="contained"
+                  className={classes.button}
+                  onClick={() => handleButtonClick("/tables")}
+                >
+                  Admin
+                </div>
               </div>
             )}
         </Toolbar>

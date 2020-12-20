@@ -102,6 +102,7 @@ const useStyles = makeStyles((theme) => ({
 function Products(props) {
   const classes = useStyles();
   const url = "https://ecoretono.000webhostapp.com/index.php";
+  //const url = "http://localhost:80/apiRetonoweb/";
   const [product, setProduct] = useState([]);
   const [productBackup, setProductBackup] = useState([]);
   const [filteredProduct, setFilteredProduct] = useState([]);
@@ -114,24 +115,9 @@ function Products(props) {
       setProductBackup(response.data);
     });
   };
-  /*
-  function info() {
-    let inf = document.getElementById('info');
-    const subinf = document.querySelector('.subinfo')
-    let stateInfo = false;
-    inf.addEventListener('click', function () {
-      if (!stateInfo) {
-        subinf.classList.add("open")
-        stateInfo = true;
-      } else {
-        subinf.classList.remove("open")
-        stateInfo = false;
-      }
-    });
-  }*/
   useEffect(() => {
     requestGet();
-    // info();
+  
   }, [noEjecutes]);
 
   useEffect(() => {
@@ -201,13 +187,6 @@ function Products(props) {
 
       <div className="Products">
         <h2 className="subtitulo">Nuestros Productos</h2>
-        {/*
-        aca va un boton que explica que son las gotas de sangre en la pagina
-<div id="info" className="info">
-          <p>?</p>
-        </div>
-        <div id="subinfo" className="subinfo"></div>
-        */}
         <div className="buscador">
           <InputBase
             placeholder="Buscar..."
@@ -307,11 +286,11 @@ function Products(props) {
                   <CardActionArea>
                     <CardMedia
                       component="img"
-                      alt="Toallita de 3 unidades + Bolsita de lienzo"
+                      alt={producto.descripcion_producto}
                       height="400"
-                      image={Toallita}
+                      image={process.env.PUBLIC_URL+'/productos/'+producto.foto_producto}
                       className={classes.img}
-                      title="Toallita de 3 unidades + Bolsita de lienzo"
+                      title={producto.nombre_producto}
                     />
                     <CardContent className="card">
                       <Typography className="titulo" variant="h5" component="h3">
