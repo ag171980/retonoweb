@@ -62,14 +62,14 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: "#80CFFF",
         }
     },
-    options:{
-        display:"flex",
-        flexDirection:"row",
-        justifyContent:"center",
-        padding:"15px   "
+    options: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        padding: "15px   "
     },
-    textdelete:{
-        fontSize:"20px"
+    textdelete: {
+        fontSize: "20px"
     },
     delete: {
         backgroundColor: "#F82C2C",
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
         background: "none",
         border: "none",
         color: "red",
-        margin:"0px 15px",
+        margin: "0px 15px",
         "&:hover": {
             cursor: "pointer",
         }

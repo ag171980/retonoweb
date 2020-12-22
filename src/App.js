@@ -9,6 +9,7 @@ import Products from "./Products.js";
 import Contact from "./Contact.js";
 import Footer from "./components/Footer";
 import Tables from './Tables';
+import ContactAdmin from './ContactAdmin';
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({}));
@@ -38,6 +39,11 @@ function App() {
               exact
               path="/tables"
               render={(props) => <Tables {...props} />}
+            />
+            <Route
+              exact
+              path="/contactAdmin"
+              render={(props) => <ContactAdmin {...props} />}
             />
           </Switch>
           <Footer/>

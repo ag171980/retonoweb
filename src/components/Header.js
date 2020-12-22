@@ -15,7 +15,7 @@ import Home from "../Home";
 import Productos from "../Products";
 import Contact from "../Contact";
 import Tables from '../Tables';
-
+import ContactAdmin from '../ContactAdmin';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -122,6 +122,11 @@ function Header(props) {
       pageURL: "/tables",
       component: Tables,
     },
+    {
+      menuTitle:"Contact",
+      pageURL:"/contactAdmin",
+      component:ContactAdmin
+    }
 
   ];
 
