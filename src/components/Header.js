@@ -197,13 +197,7 @@ function Header(props) {
                 >
                   Contacto
                 </div>
-                <div
-                  variant="contained"
-                  className={classes.button}
-                  onClick={() => handleButtonClick("/tables")}
-                >
-                  Admin
-                </div>
+                
               </div>
             )}
         </Toolbar>
